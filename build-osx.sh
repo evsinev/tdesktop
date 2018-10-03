@@ -10,13 +10,25 @@ git clone --recursive https://github.com/telegramdesktop/tdesktop.git
 
 cd Libraries
 
+set -eux
+
 wget http://tukaani.org/xz/xz-5.0.5.tar.gz
-tar xf http://tukaani.org/xz/xz-5.0.5.tar.gz
+tar xf xz-5.0.5.tar.gz
 
 wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
 tar xf libiconv-1.15.tar.gz
 
+cd libiconv-1.15
+CFLAGS="-mmacosx-version-min=10.8" CPPFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure --enable-static
+make -j4
+sudo make install
+cd ..
+
 git clone https://github.com/ericniebler/range-v3
+CFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure
+make
+sudo make install
+cd ..
 
 cd xz-5.0.5
 CFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure
@@ -54,11 +66,11 @@ make -j4
 sudo make install
 cd ..
 
-cd libiconv-1.15
-CFLAGS="-mmacosx-version-min=10.8" CPPFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure --enable-static
-make -j4
-sudo make install
-cd ..
+#cd libiconv-1.15
+#CFLAGS="-mmacosx-version-min=10.8" CPPFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure --enable-static
+#make -j4
+#sudo make install
+#cd ..
 
 git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
 cd ffmpeg
