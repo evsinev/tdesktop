@@ -10,6 +10,12 @@ git clone --recursive https://github.com/telegramdesktop/tdesktop.git
 
 cd Libraries
 
+wget http://tukaani.org/xz/xz-5.0.5.tar.gz
+tar xf http://tukaani.org/xz/xz-5.0.5.tar.gz
+
+wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
+tar xf libiconv-1.15.tar.gz
+
 git clone https://github.com/ericniebler/range-v3
 
 cd xz-5.0.5
