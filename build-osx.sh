@@ -2,7 +2,7 @@
 MACOSX_DEPLOYMENT_TARGET=10.8
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl shtool texi2html theora wget x264 xvid yasm automake libtool
+brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl shtool texi2html theora wget x264 xvid yasm automake libtool pkg-config
 
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
@@ -25,10 +25,6 @@ sudo make install
 cd ..
 
 git clone https://github.com/ericniebler/range-v3
-CFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure
-make
-sudo make install
-cd ..
 
 cd xz-5.0.5
 CFLAGS="-mmacosx-version-min=10.8" LDFLAGS="-mmacosx-version-min=10.8" ./configure
