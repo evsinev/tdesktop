@@ -6,11 +6,12 @@ brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl 
 
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+set -eux
+
 git clone --recursive https://github.com/telegramdesktop/tdesktop.git
 
+mkdir -p Libraries
 cd Libraries
-
-set -eux
 
 wget http://tukaani.org/xz/xz-5.0.5.tar.gz
 tar xf xz-5.0.5.tar.gz
