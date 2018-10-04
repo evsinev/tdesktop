@@ -22,3 +22,10 @@ jobs:
           name: Build
           command: bash ./build-osx.sh
 
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build901
+      - build941
