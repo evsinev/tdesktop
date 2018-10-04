@@ -134,6 +134,6 @@ make -j4
 sudo make install
 cd ..
 
-cd ../tdesktop
+cd ../tdesktop/Telegram
 gyp/refresh.sh
 xcodebuild -target Telegram -project Telegram.xcodeproj/
