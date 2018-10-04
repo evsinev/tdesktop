@@ -131,3 +131,7 @@ cd qtbase && git checkout v5.6.2 && git apply ../../../tdesktop/Telegram/Patches
 make -j4
 sudo make install
 cd ..
+
+cd ../tdesktop
+gyp/refresh.sh
+xcodebuild -target Telegram -project Telegram.xcodeproj/
