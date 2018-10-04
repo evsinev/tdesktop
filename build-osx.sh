@@ -6,6 +6,8 @@ brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl 
 
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+xcodebuild -version
+
 set -eux
 
 git clone --recursive https://github.com/telegramdesktop/tdesktop.git
