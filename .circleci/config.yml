@@ -1,8 +1,8 @@
 version: 2
 jobs:
-  build:
+  build901:
 
-    macos901:
+    macos:
       xcode: "9.0.1"
 
     steps:
@@ -11,7 +11,9 @@ jobs:
           name: Build
           command: bash ./build-osx.sh
 
-    macos941:
+  build941:
+
+    macos:
       xcode: "9.4.1"
 
     steps:
