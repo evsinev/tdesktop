@@ -136,5 +136,4 @@ cd ..
 
 cd ../tdesktop/Telegram
 gyp/refresh.sh
-xcodebuild -target "Telegram Support" -project Telegram.xcodeproj/
-xcodebuild -target Telegram -project Telegram.xcodeproj/
+xcodebuild -project Telegram.xcodeproj/ -alltargets -configuration Debug build
