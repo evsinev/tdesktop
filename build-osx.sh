@@ -87,7 +87,7 @@ cd ..
 
 git clone git://repo.or.cz/openal-soft.git
 cd openal-soft/build
-cmake -D LIBTYPE:STRING=STATIC -D CMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.8 ..
+cmake -D LIBTYPE:STRING=STATIC -D CMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.9 ..
 make -j4
 sudo make install
 cd ../..
