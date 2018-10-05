@@ -136,4 +136,6 @@ cd ..
 
 cd ../tdesktop/Telegram
 gyp/refresh.sh
+
+xcodebuild -project Telegram.xcodeproj/ -scheme Updater -configuration Debug build
 xcodebuild -project Telegram.xcodeproj/ -alltargets -configuration Debug build
