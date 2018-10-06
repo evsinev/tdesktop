@@ -8,7 +8,8 @@ jobs:
       - run:
           name: Build
           command: bash ./build-osx.sh
-
+      - store_artifacts:
+          path: /Users/distiller/project/tdesktop/out/Debug/Telegram.app
 
 
 workflows:
